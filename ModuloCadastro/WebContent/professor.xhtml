@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+	<title>JSF Spring Hibernate Integration</title>
+	<style type="text/css">
+.tg {
+	border-collapse: collapse;
+	border-spacing: 0;
+	border-color: #ccc;
+}
+
+.tg td {
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	padding: 10px 5px;
+	border-style: solid;
+	border-width: 1px;
+	overflow: hidden;
+	word-break: normal;
+	border-color: #ccc;
+	color: #333;
+	background-color: #fff;
+}
+
+.tg th {
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+	padding: 10px 5px;
+	border-style: solid;
+	border-width: 1px;
+	overflow: hidden;
+	word-break: normal;
+	border-color: #ccc;
+	color: #333;
+	background-color: #f0f0f0;
+}
+
+.tg .tg-4eph {
+	background-color: #f9f9f9
+}
+</style>
+</h:head>
+<h:body>
+	<h1>Add a Person</h1>
+	<h:form>
+		<table>
+			<tr>
+				<td><label>Professor</label></td>
+				<td><label>Nome</label></td>
+				<td><h:inputText id="matricula" value="#{professor.nome}"></h:inputText></td>
+				<td><label>I E</label></td>
+				<td><h:inputText id="nome" value="#{professor.instituicaoEnsino}"></h:inputText></td>
+				<td><label>Professor</label></td>
+				<h:commandButton action="index" value="Aluno" />
+			</tr>
+
+
+
+			<tr>
+
+				<td colspan="2"><h:commandButton
+						action="#{professorService.addProfessor(professor)}" value="Add Professor"></h:commandButton>
+				</td>
+			</tr>
+		</table>
+	</h:form>
+
+</h:body>
+</html>
